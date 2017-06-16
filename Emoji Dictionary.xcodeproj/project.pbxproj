@@ -12,6 +12,7 @@
 		F85011151EF2C33200D4397C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85011131EF2C33200D4397C /* Main.storyboard */; };
 		F85011171EF2C33200D4397C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85011161EF2C33200D4397C /* Assets.xcassets */; };
 		F850111A1EF2C33200D4397C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85011181EF2C33200D4397C /* LaunchScreen.storyboard */; };
+		F88EA8AF1EF42E0400BC50E9 /* EmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88EA8AE1EF42E0400BC50E9 /* EmojiViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F85011161EF2C33200D4397C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F85011191EF2C33200D4397C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F850111B1EF2C33200D4397C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F88EA8AE1EF42E0400BC50E9 /* EmojiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				F850110F1EF2C33200D4397C /* AppDelegate.swift */,
 				F85011111EF2C33200D4397C /* ViewController.swift */,
+				F88EA8AE1EF42E0400BC50E9 /* EmojiViewController.swift */,
 				F85011131EF2C33200D4397C /* Main.storyboard */,
 				F85011161EF2C33200D4397C /* Assets.xcassets */,
 				F85011181EF2C33200D4397C /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F88EA8AF1EF42E0400BC50E9 /* EmojiViewController.swift in Sources */,
 				F85011121EF2C33200D4397C /* ViewController.swift in Sources */,
 				F85011101EF2C33200D4397C /* AppDelegate.swift in Sources */,
 			);
@@ -302,6 +306,7 @@
 				F85011201EF2C33200D4397C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
