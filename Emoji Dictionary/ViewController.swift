@@ -86,7 +86,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 } // end class.
 
 
-/*
+
+/*          
+ 
+                    *************NOTES*************
+ 
+ 
+ 
  1. Add another viewController in Main.storyboard
  
  2. Add a whatever content you want to be shown on that next screen.
@@ -117,11 +123,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
  
  11. Added a new file to the Emoji Dictionary folder.
         - File is a Cocoa Touch File, called it EmojiViewController
+        - Give it a subclass name also
         - Creates a new swift file called EmojiViewController.swift.
  
- 12. In Main.storyboard
- 
- * Adding the nav controller:
+ 12. In Main.storyboard, select the viewController to be linked to our new class file.
+        - select the viewController yellow button at top. It should say "Emoji View Controller"
+        - Click the identity inspector, and in custom class start typing EmojiViewController. Should recognize it already.
+        - Module text box should recognize it as "Current - Emoji Dictionary"
+
  
  
 
