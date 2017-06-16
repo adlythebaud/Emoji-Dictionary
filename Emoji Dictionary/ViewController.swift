@@ -19,16 +19,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() { // any code inside of this function will get run the first time we open up our app.
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        tableView.dataSource = self
+        tableView.dataSource = self //once the view loads, we'll set the dataSource and delegate to self. Why?
         tableView.delegate = self
     }
     
-    
+    // number of rows in section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // how many rows/cells in our table view?
         return emojiArray.count
     }
     
+    // what's in each row/cell.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // what do we want in each row/cell in the table view?
         
