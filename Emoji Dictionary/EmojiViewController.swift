@@ -10,10 +10,21 @@ import UIKit
 
 class EmojiViewController: UIViewController {
 
+    var emoji = "NO EMOJI"
+    var def = "NO DEF"
+    
+    @IBOutlet weak var emojiLabel: UILabel!
+    
+    @IBOutlet weak var defLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print(emoji)
+        emojiLabel.text = emoji
+        defLabel.text = "hey"
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
