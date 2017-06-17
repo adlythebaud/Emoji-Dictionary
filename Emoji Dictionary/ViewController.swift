@@ -12,22 +12,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var tableView: UITableView! // table view needs to know how many things to go inside tableview, and what should go inside each row.
     
+    // I wanted to make an array of emoji objects. Maybe next time!
+    class emojiClass {
+        var symbol = ""
+        var definition = ""
+    }
+    
     
     var emojiArray = [ "😍", "☺️", "😤", "😱", "🐯", "🐈", "🎃", "🌶", "🏕", "🗻", "🚀", "🚉" ]
-    var emojiDefArray = [
-        "Smiley with heart eyes",
-        "Blushing happy face",
-        "Stressed smiley with steam coming out nose",
-        "Shock and awe face",
-        "Tiger emoji",
-        "Cat emoji",
-        "Jack-O-Lantern",
-        "Hot chili pepper",
-        "Camping emoji",
-        "Mountain top emoji",
-        "Space ship emoji",
-        "Train emoji"
-    ]
+    
     
     override func viewDidLoad() { // any code inside of this function will get run the first time we open up our app.
         super.viewDidLoad()
@@ -51,7 +44,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = UITableViewCell() // what does this do?
         
         // cell.textLabel?.text = "What's up, Adly? 💯😍"
+        
         cell.textLabel?.text = emojiArray[indexPath.row]
+        
         return cell // return each cell.
     }
     
@@ -63,9 +58,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // As soon as you select something, something will happen.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // code to make segue happen
-        let emoji = emojiArray[indexPath.row]
         
+        tableView.deselectRow(at: indexPath, animated: true)
         
+        let emoji = emojiArray[indexPath.row] // make an array of emoji objects.
     
         performSegue(withIdentifier: "moveSegue", sender: emoji)
         
