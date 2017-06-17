@@ -38,18 +38,15 @@ class EmojiViewController: UIViewController {
         super.viewDidLoad()
 
         
-        print(emoji)
         emojiLabel.text = emoji
-        // print(emojiArray[0])
+        
+        // loop through emojiArray (0 to (emojiArray.count - 1)). If emoji = emojiArray[i], defLabel.text = emojiDefArray[i].
         
         for i in 0...(emojiArray.count - 1) {
             if emoji == emojiArray[i] {
                 defLabel.text = emojiDefArray[i]
             }
         }
-        
-       
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,25 +57,5 @@ class EmojiViewController: UIViewController {
 
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
+} // END CLASS.
