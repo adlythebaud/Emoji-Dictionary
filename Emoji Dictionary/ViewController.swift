@@ -133,6 +133,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
  
  8. To add the Navigation controller at top of viewControllers, we select the first viewController, click the viewController icon, go to "Editor" at top of computer screen, select "Embed In", then select "Navigation Controller".
  
+    *                                                                            *
+    * Make sure to change the segue kind from Present Modally to Show (e.g. Push)*
+    *                                                                            *
+ 
  9. Now we have a back button after we select anything.
  
  
