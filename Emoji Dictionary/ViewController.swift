@@ -11,31 +11,37 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView! // table view needs to know how many things to go inside tableview, and what should go inside each row.
+
     
-    // I wanted to make an array of emoji objects. Maybe next time!
-    class emojiClass {
-        var symbol = ""
-        var definition = ""
-    }
+
     
-    
-    var emojiArray = [ "😍", "☺️", "😤", "😱", "🐯", "🐈", "🎃", "🌶", "🏕", "🗻", "🚀", "🚉" ]
-    
+    var emojiArray : [Emoji] = []                   // create an array of type Emoji class.
+    var testStringArray : [String] = []             // syntax for creating an empty array. Must specify the type.
     
     override func viewDidLoad() { // any code inside of this function will get run the first time we open up our app.
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self //once the view loads, we'll set the dataSource and delegate to self. Why?
         tableView.delegate = self
+        
+        
+        emojiArray = makeEmojiArray()           // set emojiArray to makeEmojiArray() function, which returns an array
     }
     
-    // number of rows in section
+    /********************************************************
+    *
+    *
+    ********************************************************/
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // how many rows/cells in our table view?
         return emojiArray.count
     }
     
-    // what's in each row/cell.
+    
+    /********************************************************
+     *
+     * What's in each row/cell.
+     ********************************************************/
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // what do we want in each row/cell in the table view?
         
@@ -45,7 +51,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         // cell.textLabel?.text = "What's up, Adly? 💯😍"
         
-        cell.textLabel?.text = emojiArray[indexPath.row]
+        let emoji = emojiArray[indexPath.row]
+        
+        cell.textLabel?.text = emoji.symbol
         
         return cell // return each cell.
     }
@@ -53,29 +61,63 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     
-    
-    // DON'T CHOOSE DIDDESELECTROWAT
-    // As soon as you select something, something will happen.
+    /********************************************************
+     * 
+     * DON'T CHOOSE DIDDESELECTROWAT
+     * As soon as you select something, something will happen.
+     ********************************************************/
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // code to make segue happen
         
-        tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)                        // unhighlight each user selection.
         
         let emoji = emojiArray[indexPath.row] // make an array of emoji objects.
-    
         performSegue(withIdentifier: "moveSegue", sender: emoji)
         
     }
     
+    /********************************************************
+     *
+     *
+     ********************************************************/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // access to next view controller:
         
         let emojiVC = segue.destination as! EmojiViewController
+        emojiVC.emoji = sender as! Emoji                        // the sender of the segue is an Emoji-class type.
+    }
+    
+    
+    /********************************************************
+     *
+     *
+     ********************************************************/
+    func makeEmojiArray() -> [Emoji] {
         
+        // var emojiArray = [ "😍", "☺️", "😤", "😱", "🐯", "🐈", "🎃", "🌶", "🏕", "🗻", "🚀", "🚉" ]
+        var emojiArrayCopy = [ "😍", "☺️" ]
+        var categories = [
+            "Smiley",
+            "Animals",
+            "Food",
+            "Places",
+            "Transportation",
+            "Miscellaneous"
+        ]
         
+        let emoji1 = Emoji()                                // let emoji1 be an Emoji Object. How you declare objects.
+        emoji1.symbol = "😍"
+        emoji1.birthYear = 2009
+        emoji1.definition = "A smiley with heart eyes"
+        emoji1.category = categories[0]
         
-        emojiVC.emoji = sender as! String
+        let emoji2 = Emoji()
+        emoji2.symbol = emojiArrayCopy[1]
+        emoji2.birthYear = 2009
+        emoji2.definition = "A happy and blushing smiley"
+        emoji2.category = categories[0]
         
+        return [emoji1, emoji2]
         
     }
     
@@ -84,9 +126,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     
-    
-    
-    
+    /********************************************************
+     *
+     *
+     ********************************************************/
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

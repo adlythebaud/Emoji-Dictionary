@@ -12,6 +12,7 @@
 		F85011151EF2C33200D4397C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85011131EF2C33200D4397C /* Main.storyboard */; };
 		F85011171EF2C33200D4397C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85011161EF2C33200D4397C /* Assets.xcassets */; };
 		F850111A1EF2C33200D4397C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85011181EF2C33200D4397C /* LaunchScreen.storyboard */; };
+		F86A8CF61EF99CF700728AA6 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86A8CF51EF99CF700728AA6 /* Emoji.swift */; };
 		F88EA8AF1EF42E0400BC50E9 /* EmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88EA8AE1EF42E0400BC50E9 /* EmojiViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		F85011161EF2C33200D4397C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F85011191EF2C33200D4397C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F850111B1EF2C33200D4397C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F86A8CF51EF99CF700728AA6 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		F88EA8AE1EF42E0400BC50E9 /* EmojiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +61,7 @@
 				F850110F1EF2C33200D4397C /* AppDelegate.swift */,
 				F85011111EF2C33200D4397C /* ViewController.swift */,
 				F88EA8AE1EF42E0400BC50E9 /* EmojiViewController.swift */,
+				F86A8CF51EF99CF700728AA6 /* Emoji.swift */,
 				F85011131EF2C33200D4397C /* Main.storyboard */,
 				F85011161EF2C33200D4397C /* Assets.xcassets */,
 				F85011181EF2C33200D4397C /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				F88EA8AF1EF42E0400BC50E9 /* EmojiViewController.swift in Sources */,
 				F85011121EF2C33200D4397C /* ViewController.swift in Sources */,
+				F86A8CF61EF99CF700728AA6 /* Emoji.swift in Sources */,
 				F85011101EF2C33200D4397C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
